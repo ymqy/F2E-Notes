@@ -32,8 +32,8 @@
 
 ### Basic Types
 
-- 当你指定了--strictNullChecks标记时，null 只能赋值给 null、any、void 类型，undefined 只能赋值给 undefined、any、void 类型。
-- null 和 undefined 是其它类型（包括 void）的子类型，可以赋值给其它类型（如：数字类型），赋值后的类型会变成 null 或 undefined
+- 当你指定了 --strictNullChecks 标记时，null 只能赋值给 null、any、void 类型，undefined 只能赋值给 undefined、any、void 类型。
+- 当你没有指定 --strictNullChecks 标记时，null 和 undefined 是其它类型（包括 void）的子类型，可以赋值给其它类型（如：数字类型），赋值后的类型会变成 null 或 undefined
 
 ### Variable Declarations
 
@@ -46,11 +46,45 @@
 - 类型推断：函数参数类型、函数返回值类型
 - 在属性个数不确定的时候，可以使用可索引接口
 - Dog 继承 Animal，所以 Dog 是 Animal 的子类型
+- 只读属性和实例属性必须被初始化
+- never、null 和 undefined 是任意类型的子类型（任意类型并非一定是指 any 类型，也可以是具体的类型，比如 number）
+- 接口之间可以相互继承，实现接口的复用
+- 类之间也可以相互继承，实现方法和属性的复用
+- 接口可以由类来实现，类可以由接口来继承
+- （接口继承类）接口可以抽离出类的成员，抽离的时候会包括公有成员、私有成员和受保护成员
+- 接口可以通过类来实现，但是接口只能约束类的公有成员(public)
+- 前四条总结起来，无非应该关注两个点：继承和实现，通俗地讲，继承是得到了属性，实现是需要接口的必要属性。
+- 什么时候使用接口什么时候使用抽象类？- 作者回复: 首先，在抽象类中可以包含方法的实现，也可以只声明不实现；而在接口中只能声明方法，不包含实现。另外，抽象类侧重类别的抽象（定义这个对象是什么，比如：人类可以是男人的抽象类），而接口侧重功能的抽象（定义这个对象能做什么，比如：人可以吃喝跑跳）。
+
+限定接口的使用范围：只能由子类来实现这个接口。
+```ts
+class Auto {
+    private state = 1
+}
+interface AutoInterface extends Auto {
+
+}
+class C implements AutoInterface {
+    state = 1
+}
+class Bus extends Auto implements AutoInterface {
+
+}
+```
+举个例子：一个UI类库定义了一个Button类并提供了ButtonInterface接口。现在你想实现一个自己的Button类，添加些自定义属性，那么只能是Button的子类去实现ButtonInterface接口，其他的类不能实现这个接口，即使与Button具有相同的成员。
+
+这种接口的存在，对子类起到了约束作用，保证了继承关系。
 
 #### 疑问
 
-1. 字面量函数类型、接口函数类型、别名函数类型
-
+1. 字面量函数类型、接口函数类型、别名函数类型之间的区别
+2. 为什么 any 类型的变量可以赋值给 number 类型
+```ts
+let n: number = 1;
+let m: any = 'a';
+n = m;
+n.toFixed();
+```
 
 ### Classes
 
