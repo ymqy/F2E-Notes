@@ -88,6 +88,8 @@ n.toFixed();
 
 ### Classes
 
+- 不同于接口，抽象类可以包含成员的实现细节。
+
 
 ### Functions
 
