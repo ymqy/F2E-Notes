@@ -96,8 +96,12 @@ n.toFixed();
 
 ### Generics
 
+- 泛型类指的是实例部分的类型，所以类的静态属性不能使用这个泛型类型。
+
 
 ### Enums
+
+- [How do the different enum variants work in TypeScript?](https://stackoverflow.com/questions/28818849/how-do-the-different-enum-variants-work-in-typescript)
 
 
 ### Type Inference
