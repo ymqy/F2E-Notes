@@ -97,7 +97,7 @@ let result2 = buildName("Bob", "Adams", "Sr.");  // error, too many parameters
 let result3 = buildName("Bob", "Adams");         // ah, just right
 ```
 
-JavaScript里，每个参数都是可选的，可传可不传。 没传参的时候，它的值就是undefined。 在TypeScript里我们可以在参数名旁使用`?`实现可选参数的功能。 比如，我们想让last name是可选的：
+JavaScript里，每个参数都是可选的，可传可不传。 没传参的时候，它的值就是undefined。 在TypeScript里我们可以在参数名旁使用`?`实现可选参数的功能。 比如，我们想让`lastName`是可选的：
 
 ```typescript
 function buildName(firstName: string, lastName?: string) {
@@ -112,9 +112,9 @@ let result2 = buildName("Bob", "Adams", "Sr.");  // error, too many parameters
 let result3 = buildName("Bob", "Adams");  // ah, just right
 ```
 
-可选参数必须跟在必须参数后面。 如果上例我们想让first name是可选的，那么就必须调整它们的位置，把first name放在后面。
+可选参数必须跟在必须参数后面。 如果上例我们想让`firstName`是可选的，那么就必须调整它们的位置，把`firstName`放在后面。
 
-在TypeScript里，我们也可以为参数提供一个默认值当用户没有传递这个参数或传递的值是`undefined`时。 它们叫做有默认初始化值的参数。 让我们修改上例，把last name的默认值设置为`"Smith"`。
+在TypeScript里，我们也可以为参数提供一个默认值当用户没有传递这个参数或传递的值是`undefined`时。 它们叫做有默认初始化值的参数。 让我们修改上例，把`lastName`的默认值设置为`"Smith"`。
 
 ```typescript
 function buildName(firstName: string, lastName = "Smith") {
@@ -254,33 +254,7 @@ function f(this: void) {
 让我们往例子里添加一些接口，`Card` 和 `Deck`，让类型重用能够变得清晰简单些：
 
 ```typescript
-interface Card {
-    suit: string;
-    card: number;
-}
-interface Deck {
-    suits: string[];
-    cards: number[];
-    createCardPicker(this: Deck): () => Card;
-}
-let deck: Deck = {
-    suits: ["hearts", "spades", "clubs", "diamonds"],
-    cards: Array(52),
-    // NOTE: The function now explicitly specifies that its callee must be of type Deck
-    createCardPicker: function(this: Deck) {
-        return () => {
-            let pickedCard = Math.floor(Math.random() * 52);
-            let pickedSuit = Math.floor(pickedCard / 13);
 
-            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
-        }
-    }
-}
-
-let cardPicker = deck.createCardPicker();
-let pickedCard = cardPicker();
-
-alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 ```
 
 现在TypeScript知道`createCardPicker`期望在某个`Deck`对象上调用。 也就是说`this`是`Deck`类型的，而非`any`，因此`--noImplicitThis`不会报错了。
