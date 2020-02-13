@@ -1,5 +1,17 @@
 # 目录
 
+## 前端学院
+
+- [奇舞学院](https://study.qiyun.360.cn/)
+- [百度前端技术学院](http://ife.baidu.com/)
+
+
+## 付费学习
+
+- [九章算法](https://www.jiuzhang.com/)
+- [极客时间](http://time.geekbang.org/)
+
+
 - [IT大咖说](http://www.itdks.com/)
 
 ## Github 资源
