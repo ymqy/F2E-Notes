@@ -103,6 +103,10 @@ n.toFixed();
 
 - [How do the different enum variants work in TypeScript?](https://stackoverflow.com/questions/28818849/how-do-the-different-enum-variants-work-in-typescript)
 
+#### 困惑
+
+- 外部枚举后续需要理清
+
 
 ### Type Inference
 
@@ -153,7 +157,7 @@ n.toFixed();
 
 
 ## 参考
-
+- [TypeScript Language Specification](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md)
 - [TypeScript-CN](https://github.com/zhongsp/TypeScript)
 - [TypeScript](http://www.typescriptlang.org/)
 - [TypeScript Playground](http://www.typescriptlang.org/play/index.html)
