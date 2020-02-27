@@ -1,8 +1,7 @@
 # 目录
 
-## 周刊
+## 前端九部
 
-- [奇舞周刊](https://weekly.75team.com/)
+- [Github](https://github.com/frontend9)
+- [语雀](https://www.yuque.com/fe9)
 
-
-## 知乎专栏
