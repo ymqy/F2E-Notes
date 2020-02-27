@@ -12,10 +12,12 @@
 - [CSS 遵循 W3C 标准](https://www.w3.org/Style/CSS/)
 - [Latest stable CSS](https://www.w3.org/TR/CSS/)
 - [ECMAScript 遵循 ECMA-262 标准](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [The Web platform: Browser technologies](https://platform.html5.org/)
 - [MDN web docs](https://developer.mozilla.org/)
 
 ## 参考
 
+- [了解 Web 标准规范和组织](https://juejin.im/post/5c700b1de51d457fd033f496)
 - [How to Read the ECMAScript Specification](https://timothygu.me/es-howto/)
 - [如何阅读 ECMAScript 规范](https://juejin.im/post/5ce354ace51d454d544abea7)
 
