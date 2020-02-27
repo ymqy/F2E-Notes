@@ -157,9 +157,12 @@ n.toFixed();
 
 
 ## 参考
+
+- [深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/)
 - [TypeScript Language Specification](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md)
 - [TypeScript-CN](https://github.com/zhongsp/TypeScript)
 - [TypeScript](http://www.typescriptlang.org/)
 - [TypeScript Playground](http://www.typescriptlang.org/play/index.html)
 - [TypeScript Evolution](https://mariusschulz.com/blog/series/typescript-evolution)
 - [Object vs object vs {}](https://mariusschulz.com/blog/the-object-type-in-typescript)
+- [Microsoft/TypeScript-React-Starter](https://github.com/Microsoft/TypeScript-React-Starter)
