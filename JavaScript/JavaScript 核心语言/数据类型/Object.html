@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+  <script>
+    let o = {
+      name: 'cj',
+      age: 10,
+      greet: function () {
+        console.log(`Hello, ${this.name}`);
+      },
+      friends: [
+        {
+          name: 'cc',
+          age: 10,
+          greet: function () {
+            console.log(`Hello, ${this.name}`);
+          },
+          friends: [
+
+          ],
+        },
+        {
+          name: 'zcj',
+          age: 10,
+          greet: function () {
+            console.log(`Hello, ${this.name}`);
+          },
+          friends: [
+
+          ],
+        },
+      ],
+    };
+
+
+    let ymqy = {
+      name: 'ymqy',
+      girlFriend: {
+        name: 'cj',
+        oldBoyFriend: {
+          name: 'ymqy1',
+          oldGrilFriend: {
+            name: 'cj1'
+          }
+        },
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,5 +1,10 @@
 # 目录
 
+## 国外学习资源
+
+- [Frontend Masters](https://livestream.com/accounts/4894689) - LiveStream
+- [EggHead](https://egghead.io/)
+
 ## 前端学院
 
 - [奇舞学院](https://study.qiyun.360.cn/)
@@ -26,6 +31,9 @@ https://github.com/30-seconds/30_seconds_of_knowledge
 - Ruby Snippets: 30 Seconds of Ruby / Issues
 - C++ Snippets: 30 Seconds of C++ / Issues
 
+## JavaScript 学习资源
+
+- [akira-cn/FE_You_dont_know](https://github.com/akira-cn/FE_You_dont_know) - 分享在前端开发中，你不知道的JavaScript、CSS和HTML趣味知识，增加你的知识面。
 
 ## CSS 学习资源
 https://css-tricks.com/

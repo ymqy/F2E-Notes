@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="button">click</button>
+  <script>
+    const btn = document.getElementById('button');
+    debugger
+    btn.addEventListener('click', () => {
+      Promise.resolve().then(() => {
+        console.log('Promise MicroTask output 1');
+      });
+      console.log('MacroTask output 1');
+    });
+
+    btn.addEventListener('click', () => {
+      Promise.resolve().then(() => {
+        console.log('Promise MicroTask output 2');
+      });
+      console.log('MacroTask output 2');
+    });
+
+    console.log('JS 模拟点击');
+    btn.click();
+  </script>
+</body>
+</html>
